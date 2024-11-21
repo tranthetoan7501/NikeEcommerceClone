@@ -1,22 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
+import Navigation from "./Navigation";
+import { NikeIcon } from "@/app/icon";
+import UserToolsSection from "./UserToolsSection";
 
-export function Header() {
+interface Props {}
+
+const Header = (props: Props) => {
   return (
-    <div className="flex justify-center">
-      <div className="w-full">
-        <Button className="w-full rounded-none bg-black hover:bg-black group">
-          <Link
-            href="https://oeforgood.com/blogs/news/oe-enfile-ses-bottes-et-devient-vigneron"
-            className="tracking-[.0625rem] text-[.8125rem] font-bold flex items-center justify-center gap-3"
-          >
-            On vient d'acheter notre 1er Domaine Oé dans le sud de la France ! 🥳
-            <ArrowRightIcon className="transition-transform duration-300 ease-in-out transform group-hover:scale-x-125 origin-left" />
-          </Link>
-        </Button>
+    <div className="w-full px-12">
+      <div className="flex item-center justify-between h-[3.75rem]">
+        <div className="h-full flex items-center justify-center">
+          <Button variant="outline" size="icon">
+            <NikeIcon />
+          </Button>
+        </div>
+        <Navigation />
+        <UserToolsSection />
       </div>
-      <div></div>
     </div>
   );
-}
+};
+
+export default Header;

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./styles/app.scss";
-import { Header } from "./components/Header";
+import Header from "./components/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,14 +15,14 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Oé - Buy organic wines made with zero pesticides. Certified B Corp.",
+  title: "Nike. Just Do It. Nike VN",
   description:
-    "Buy organic wines made with zero pesticides from the Oé boutique. Certified B Corp with quick delivery anywhere in Europe. Drink with purpose.",
+    "Nike delivers innovative products, experiences and services to inspire athletes. Free delivery and returns on every order with Nike Membership",
   icons: {
     icon: [
       {
-        url: "/app-icon.png",
-        href: "/app-icon.png",
+        url: "/nike.png",
+        href: "/nike.png",
       },
     ],
   },
